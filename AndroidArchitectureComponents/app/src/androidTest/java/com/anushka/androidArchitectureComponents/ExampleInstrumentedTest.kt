@@ -1,4 +1,4 @@
-package com.anushka.bindingdemo1
+package com.anushka.androidArchitectureComponents
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

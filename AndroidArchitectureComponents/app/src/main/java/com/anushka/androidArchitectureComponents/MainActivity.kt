@@ -1,13 +1,9 @@
-package com.anushka.bindingdemo1
+package com.anushka.androidArchitectureComponents
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
-import com.anushka.bindingdemo1.databinding.ActivityMainBinding
+import com.anushka.androidArchitectureComponents.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

@@ -1,4 +1,4 @@
-package com.anushka.bindingdemo1
+package com.anushka.androidArchitectureComponents
 
 import org.junit.Test
 
