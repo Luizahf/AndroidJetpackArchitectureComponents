@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModelFactory = MainActivityViewModelFactory(125)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainActivityViewModel::class.java)
-        viewModel.total.observe(this, Observer {
+        viewModel.totalData.observe(this, Observer {
             binding.inputEditText.text = it.toString()
         })
         binding.student = getStudent()
