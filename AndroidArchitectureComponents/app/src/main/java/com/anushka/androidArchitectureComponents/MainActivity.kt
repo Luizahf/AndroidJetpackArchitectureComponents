@@ -3,6 +3,7 @@ package com.anushka.androidArchitectureComponents
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.anushka.androidArchitectureComponents.databinding.ActivityMainBinding
 
@@ -15,12 +16,13 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModelFactory = MainActivityViewModelFactory(125)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainActivityViewModel::class.java)
-        binding.countText.text = viewModel.getCurrentCount().toString()
+        viewModel.total.observe(this, Observer {
+            binding.inputEditText.text = it.toString()
+        })
         binding.student = getStudent()
 
         binding.button.setOnClickListener {
-
-            binding.countText.text = viewModel.getUpdatedCount().toString()
+            viewModel.setTotal(binding.inputEditText.text.toString().toInt())
         }
     }
 
