@@ -1,10 +1,12 @@
 package com.anushka.androidArchitectureComponents
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.anushka.androidArchitectureComponents.NavigationClass.Navigation01Activity
 import com.anushka.androidArchitectureComponents.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
             viewModel.setTotal(binding.inputEditText.text.toString().toInt())
+        }
+
+        binding.btnNext.setOnClickListener {
+            startActivity(Intent(this, Navigation01Activity::class.java))
         }
     }
 
