@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.anushka.androidArchitectureComponents.NavigationClass.Navigation01Activity
+import com.anushka.androidArchitectureComponents.ViewModelExample.MainActivity2
 import com.anushka.androidArchitectureComponents.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnNext.setOnClickListener {
-            startActivity(Intent(this, Navigation01Activity::class.java))
+            startActivity(Intent(this, MainActivity2::class.java))
         }
     }
 
