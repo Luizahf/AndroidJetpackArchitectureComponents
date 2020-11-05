@@ -23,7 +23,14 @@ class MainActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 downloadUserData()
             }
+        }
 
+        CoroutineScope(Dispatchers.Main).launch {
+            Log.i("MyTag", "Hi main")
+        }
+
+        CoroutineScope(Dispatchers.IO).launch {
+            Log.i("MyTag", "Hi background")
         }
     }
 
